@@ -26,42 +26,12 @@ void kernel_error(void)
 
 int main(void)
 {
-	RCC->AHB1ENR  = 1;
+	RCC->AHB1ENR  = 255;
 	volatile int a = 0;
 	a++;
 	
-	/*
-	GPIOA_MODER_REG->bite_register.bit_0 = 1;
-	GPIOA_MODER_REG->bite_register.bit_1 = 1;
-	GPIOA_MODER_REG->full_register = 0xFFFFFFFF;
 	
-	GPIOA_OTYPER_REG->bite_register.bit_0 = 1;
-	GPIOA_OTYPER_REG->bite_register.bit_1 = 1;
-	GPIOA_OTYPER_REG->full_register = 0xFFFFFFFF;
 	
-	GPIOA_OSPEEDR_REG->bite_register.bit_0 = 1;
-	GPIOA_OSPEEDR_REG->bite_register.bit_1 = 1;
-	GPIOA_OSPEEDR_REG->full_register = 0xFFFFFFFF;
-	 
-	GPIOA_PUPDR_REG->bite_register.bit_0 = 1;
-	GPIOA_PUPDR_REG->bite_register.bit_1 = 1;
-	GPIOA_PUPDR_REG->full_register = 0xFFFFFFFF;
-	
-	GPIOA_ODR_REG->bite_register.bit_0 = 1;
-	GPIOA_ODR_REG->bite_register.bit_1 = 1;
-	GPIOA_ODR_REG->full_register = 0xFFFFFFFF;
-	
-	GPIOA_BSRR_REG->bite_register.bit_0 = 1;
-	GPIOA_BSRR_REG->bite_register.bit_1 = 1;
-	GPIOA_BSRR_REG->full_register = 0xFFFFFFFF;
-	
-	GPIOA_AFR1_REG->bite_register.bit_0 = 1;
-	GPIOA_AFR1_REG->bite_register.bit_1 = 1;
-	GPIOA_AFR1_REG->full_register = 0xFFFFFFFF;
-	
-	GPIOA_AFR2_REG->bite_register.bit_0 = 1;
-	GPIOA_AFR2_REG->bite_register.bit_1 = 1;
-	GPIOA_AFR2_REG->full_register = 0xFFFFFFFF;*/
 	
 	while(1);
 	
