@@ -3,58 +3,25 @@
 
 /*
  * Функции инициализации периферии 
+ * TODO
  */
 
+/*
+ * Инициализация пина на вход(кнопка), подтяжка к 3.3V
+ * После второй параметр идет со смешением х2(после пина 0)
+ * Пример :
+ * INIT_PIN_BUTTON(E, 8) - инициализация пина 4 порта Е
+ */
+#define INIT_PIN_BUTTON(port,pin) GPIO##port##_PUPDR_REG->bite_register.bit_##pin = 1
 
-enum gpio_pins
-{
-		PIN_0,
-		PIN_1,
-		PIN_2,
-		PIN_3,
-		PIN_4,
-		PIN_5,
-		PIN_6,
-		PIN_7,
-		PIN_8,
-		PIN_9,
-		PIN_10,
-		PIN_11,
-		PIN_12,
-		PIN_13,
-		PIN_14,
-		PIN_15
-};
+/*
+ * Инициализация пина на выход, скорость low
+ * После второй параметр идет со смешением х2(после пина 0)
+ * Пример :
+ * INIT_PIN_OUT(A, 12) - инициализация пина 6 порта A
+ */
+#define INIT_PIN_OUT(port,pin) GPIO##port##_MODER_REG->bite_register.bit_##pin = 1
 
-enum gpio_ports
-{
-		PORTA,
-		PORTB,
-		PORTC,
-		PORTD,
-		PORTE
-};
-
-
-/*TODO*/
-enum gpio_pin_function
-{
-	pin_input,
-	pin_output,
-	pin_alternate,
-	pin_analog
-};
-
-
-void init_gpio(void);
-
-void init_butthon(enum gpio_ports port, enum gpio_pins pin);
-
-void init_pin_out(enum gpio_ports port, enum gpio_pins pin);
-
-void gpio_pin_write();
-
-void gpio_pin_read();
 
 
 
