@@ -1,6 +1,7 @@
 #include "stm32f4xx.h"
 #include "type.h"
 #include "macro_reg.h"
+#include "init_periph.h"
 
 void kernel_error(void)
 {
@@ -9,31 +10,20 @@ void kernel_error(void)
 }
 
 //__asm(" mov r0, #0xFFFF");
+//volatile int count __asm__("v2") = 0xFFF;
 
 
-/*#define GPIOA_MODER_REG     ((volatile register_typedef *)(0x40000000UL + 0x00020000UL + 0x0000UL + 0x00UL))
-#define GPIOA_OTYPER_REG    ((volatile register_typedef *)(0x40020000UL + 0x00020000UL + 0x0000UL + 0x04UL))
-#define GPIOA_OSPEEDR_REG	((volatile register_typedef *)(0x40020000UL + 0x00020000UL + 0x0000UL + 0x08UL))
-#define GPIOA_PUPDR_REG     ((volatile register_typedef *)(0x40020000UL + 0x00020000UL + 0x0000UL + 0x0CUL))
-#define GPIOA_IDR_REG       ((volatile register_typedef *)(0x40020000UL + 0x00020000UL + 0x0000UL + 0x10UL))
-#define GPIOA_ODR_REG       ((volatile register_typedef *)(0x40020000UL + 0x00020000UL + 0x0000UL + 0x14UL))
-#define GPIOA_BSRR_REG      ((volatile register_typedef *)(0x40020000UL + 0x00020000UL + 0x0000UL + 0x18UL))
-#define GPIOA_LCKR_REG      ((volatile register_typedef *)(0x40020000UL + 0x00020000UL + 0x0000UL + 0x1CUL))
-#define GPIOA_AFR1_REG      ((volatile register_typedef *)(0x40020000UL + 0x00020000UL + 0x0000UL + 0x20UL))
-#define GPIOA_AFR2_REG      ((volatile register_typedef *)(0x40020000UL + 0x00020000UL + 0x0000UL + 0x24UL)) */
 
 
 
 int main(void)
 {
-	RCC->AHB1ENR  = 255;
-	volatile int a = 0;
-	a++;
+	rcc_init();
+	mco2_init();
 	
 	
 	
 	
-	while(1);
 	
 }
 
@@ -44,5 +34,37 @@ int main(void)
 
 
 
+
+
+/*
+RCC->AHB1ENR  = 255;
+	volatile int a = 0;
+	a++;
+	
+	//testasm();
+	
+	INIT_PIN_BUTTON(E, 8);
+	
+	INIT_PIN_OUT(A, 12);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	while(1){
+		
+		if(GPIOE_IDR_REG->bite_register.bit_4 == 0)
+			GPIOA_BSRR_REG->bite_register.bit_22 = 1;
+		else
+			GPIOA_BSRR_REG->bite_register.bit_6 = 1;
+		
+		
+		
+	}
+*/
 
 
