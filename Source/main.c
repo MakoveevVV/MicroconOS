@@ -14,13 +14,30 @@ void kernel_error(void)
 
 
 
-extern void testasm(void);
-
 
 
 int main(void)
 {
-	RCC->AHB1ENR  = 255;
+	rcc_init();
+	mco2_init();
+	
+	
+	
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+/*
+RCC->AHB1ENR  = 255;
 	volatile int a = 0;
 	a++;
 	
@@ -48,15 +65,6 @@ int main(void)
 		
 		
 	}
-	
-}
-
-
-
-
-
-
-
-
+*/
 
 

@@ -24,8 +24,8 @@
 
 
 
-
-
+void rcc_init(void);
+void mco2_init(void);
 
 
 

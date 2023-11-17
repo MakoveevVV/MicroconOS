@@ -209,13 +209,13 @@
 #define USART6_CR3_REG      ((volatile register_typedef *)(0x40011414))
 #define USART6_GTPR_REG     ((volatile register_typedef *)(0x40011418))
 
-
-
-
-
-
-
-
+/* Регистры FLASH */
+#define FLASH_ACR_REG       ((volatile register_typedef *)(0x40023C00))
+#define FLASH_KEYR_REG      ((volatile register_typedef *)(0x40023C04))
+#define FLASH_OPTKEYR_REG   ((volatile register_typedef *)(0x40023C08))
+#define FLASH_SR_REG        ((volatile register_typedef *)(0x40023C0C))
+#define FLASH_CR_REG        ((volatile register_typedef *)(0x40023C10))
+#define FLASH_OPTCR_REG     ((volatile register_typedef *)(0x40023C14))
 
 
 #endif /*__MACRO_REG_H*/
