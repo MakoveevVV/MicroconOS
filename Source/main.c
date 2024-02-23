@@ -9,21 +9,20 @@ void kernel_error(void)
 		while(1);
 }
 
-//__asm(" mov r0, #0xFFFF");
-//volatile int count __asm__("v2") = 0xFFF;
 
-
+extern void mem_copy(void);
 
 
 
 int main(void)
 {
-	rcc_init();
-	mco2_init();
+//	rcc_init();
+//	mco2_init();
+	volatile int x = 0xFF,y = 0xAAAA, z;
 	
+	mem_copy();
 	
-	
-	
+	while(1){}
 	
 }
 
