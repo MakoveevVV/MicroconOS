@@ -4,7 +4,7 @@
 
 
 
-#endif /*__DRIVERS_PERIPH_H */
+#endif /*__SCHEDULE_H */
 
 
 

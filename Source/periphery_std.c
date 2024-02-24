@@ -1,10 +1,13 @@
-#include "init_periph.h"
+/*
+ * Инициализация и драйверы периферии МК
+ *
+ * Author: Makoveev V.V. <vvmakoveev@yandex.ru>
+ */
+
+#include "periphery_std.h"
 #include "macro_reg.h"
 #include "stm32f4xx.h"
-/*
- * Инициализация стандартной периферии МК
- * TODO 
- */
+
 
 /*
  * Инициализация RCC
@@ -107,8 +110,7 @@ void rcc_init(void)
 		RCC_CFGR_REG->bite_register.bit_1 = 1;
 			
 		/* Ожидание переключения на PLL */
-		while(RCC_CFGR_REG->bite_register.bit_3 == 0){};	
-		
+		while(RCC_CFGR_REG->bite_register.bit_3 == 0){};		
 }
 
 
@@ -135,14 +137,6 @@ void mco2_init(void)
 		GPIOC_AFR2_REG->bite_register.bit_6 = 0;
 		GPIOC_AFR2_REG->bite_register.bit_7 = 0;
 }
-
-
-
-
-
-
-
-
 
 
 
