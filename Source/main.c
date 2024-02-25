@@ -12,24 +12,32 @@ void kernel_error(void)
 
 
 
+
+
 int main(void)
 {
+
 	rcc_init();
 	mco2_init();
 	
+	
+	
 	PORTA_CLOCK;
-	PIN_7_INIT_OUT(A);
-	PIN_7_RESET(A);
+	
+	PIN_6_INIT_OUT(A);
 	
 	
+	while(1){
+		PIN_6_SET(A);
+		delay_ms(1000);
+		PIN_6_RESET(A);
+		delay_ms(1000);
 	
-	while(1){}
+	
+	}
 		
 		
-	
-	
 }
-
 
 
 

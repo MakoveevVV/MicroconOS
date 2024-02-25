@@ -139,4 +139,35 @@ void mco2_init(void)
 }
 
 
+/*
+ * Реализация задержки (TIMER6)
+ */
+volatile unsigned int delay_tick;
 
+void init_tim6()
+{
+	RCC_APB1ENR_REG->bite_register.bit_4 = 1;
+	TIM6->PSC = 42000 - 1;
+	TIM6->ARR = 2;
+	TIM6->DIER = 1;
+
+	NVIC_EnableIRQ(TIM6_DAC_IRQn);
+	TIM6->CR1 = 1;
+}
+
+
+void delay_ms(unsigned int delay)
+{
+	delay_tick = 0;
+	init_tim6();
+	
+	while(delay_tick < delay);
+	
+	TIM6->CR1 = 0;
+}
+
+void TIM6_DAC_IRQHandler(void)
+{
+	TIM6->SR = 0;
+	delay_tick++;
+}

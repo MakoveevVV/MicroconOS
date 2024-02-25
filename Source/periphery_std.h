@@ -121,7 +121,7 @@ void mco2_init(void);
 #define PIN_15_RESET(port) GPIO##port##_BSRR_REG->bite_register.bit_31 = 1
 
 /* Объявления функций драйверов периферии */
-
+void delay_ms(unsigned int delay);
 
 
 #endif /*__PERIPHERY_STD_H */
