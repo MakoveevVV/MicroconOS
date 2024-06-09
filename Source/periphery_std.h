@@ -73,6 +73,8 @@
 /* Объявления функций инициализации */
 void rcc_init(void);
 void mco2_init(void);
+void i2c1_init(void);
+
 
 
 
@@ -122,6 +124,22 @@ void mco2_init(void);
 
 /* Объявления функций драйверов периферии */
 void delay_ms(unsigned int delay);
+int i2c_send(unsigned short address, unsigned char *data, unsigned short size);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #endif /*__PERIPHERY_STD_H */
