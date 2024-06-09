@@ -7,7 +7,7 @@
 
 
 /* Выбран кооперативный планировщик */
-#ifdef COOPER_SCHEDULER
+#ifdef SIMPLE_SCHEDULER
 
 /* Число задач */
 #define MAX_TASK 8
