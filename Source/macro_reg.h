@@ -217,6 +217,15 @@
 #define FLASH_CR_REG        ((volatile register_typedef *)(0x40023C10))
 #define FLASH_OPTCR_REG     ((volatile register_typedef *)(0x40023C14))
 
+/* Регистры TIMER3 */
+
+
+
+
+
+
+
+
 
 #endif /*__MACRO_REG_H*/
 
