@@ -4,6 +4,7 @@
 #include "periphery_std.h"
 #include <stdio.h>
 #include "devices_display.h"
+#include "devices_common.h"
 
 /*TODO
 	
@@ -18,6 +19,10 @@ void kernel_error()
 
 
 
+
+volatile uint8_t enc;
+
+
 int main(void)
 {
 
@@ -30,14 +35,16 @@ int main(void)
 	
 	pcf8574_display_init();
 	
+	char str[20];
+	char rez;
 	
+
+	encoder_init();
 	
 	
 	while(1){
 		
 		
-		
-	
 	
 	}
 		

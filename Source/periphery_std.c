@@ -177,12 +177,11 @@ void TIM6_DAC_IRQHandler(void)
 /* PB6 - clock, PB7 - data */
 void i2c1_init()
 {
-	//включаем тактирование портов и модуля I2C
+	
  RCC->AHB1ENR |= RCC_AHB1ENR_GPIOBEN;
  RCC->APB1ENR |= RCC_APB1ENR_I2C1EN;
- //альтернативная ф-ция, выход с открытым стоком, 2 MHz
 
- GPIOB->AFR[0]|=((4<<(6*4))|(4<<(7*4)));   // 4 AF
+ GPIOB->AFR[0]|=((4<<(6*4))|(4<<(7*4)));   
 
  GPIOB->MODER |= GPIO_MODER_MODER6_1|GPIO_MODER_MODER7_1;
  GPIOB->OTYPER |= GPIO_OTYPER_OT_6|GPIO_OTYPER_OT_7;
