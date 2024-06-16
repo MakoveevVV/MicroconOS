@@ -41,7 +41,9 @@ int main(void)
 
 	encoder_init();
 	
-	
+	sprintf(str,"Stm32F407VG");
+
+	pcf8574_display_string(str);
 	while(1){
 		
 		
