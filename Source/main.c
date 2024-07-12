@@ -20,12 +20,16 @@ void kernel_error()
 
 
 
-volatile uint8_t enc;
-
 
 int main(void)
-{
-
+{	
+	
+	
+	
+	/* 
+	
+	*/
+	
 	rcc_init();
 	mco2_init();
 
@@ -36,14 +40,21 @@ int main(void)
 	pcf8574_display_init();
 	
 	char str[20];
-	char rez;
+	
 	
 
-	encoder_init();
 	
-	sprintf(str,"Stm32F407VG");
+	
+	sprintf(str,"Stm32F407VFAA");
 
 	pcf8574_display_string(str);
+	
+	
+	
+	
+	
+	
+	
 	while(1){
 		
 		
