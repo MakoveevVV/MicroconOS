@@ -6,6 +6,8 @@
 #include "devices_display.h"
 #include "devices_common.h"
 
+#include <stdlib.h>
+
 /*TODO
 	
 1.	Переписать включение rcc периферии
@@ -23,8 +25,7 @@ void kernel_error()
 
 int main(void)
 {	
-	
-	
+
 	
 	/* 
 	
