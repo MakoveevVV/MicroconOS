@@ -14,16 +14,16 @@
  * Пример :
  * PIN_0_INIT_BUTTON(E) - инициализация пина 0 порта Е
  */
-#define PIN_0_INIT_BUTTON(port) GPIO##port##_PUPDR_REG->bite_register.bit_0 = 1
-#define PIN_1_INIT_BUTTON(port) GPIO##port##_PUPDR_REG->bite_register.bit_2 = 1
-#define PIN_2_INIT_BUTTON(port) GPIO##port##_PUPDR_REG->bite_register.bit_4 = 1
-#define PIN_3_INIT_BUTTON(port) GPIO##port##_PUPDR_REG->bite_register.bit_6 = 1
-#define PIN_4_INIT_BUTTON(port) GPIO##port##_PUPDR_REG->bite_register.bit_8 = 1
-#define PIN_5_INIT_BUTTON(port) GPIO##port##_PUPDR_REG->bite_register.bit_10 = 1
-#define PIN_6_INIT_BUTTON(port) GPIO##port##_PUPDR_REG->bite_register.bit_12 = 1
-#define PIN_7_INIT_BUTTON(port) GPIO##port##_PUPDR_REG->bite_register.bit_14 = 1
-#define PIN_8_INIT_BUTTON(port) GPIO##port##_PUPDR_REG->bite_register.bit_16 = 1
-#define PIN_9_INIT_BUTTON(port) GPIO##port##_PUPDR_REG->bite_register.bit_18 = 1
+#define PIN_0_INIT_BUTTON(port)  GPIO##port##_PUPDR_REG->bite_register.bit_0 = 1
+#define PIN_1_INIT_BUTTON(port)  GPIO##port##_PUPDR_REG->bite_register.bit_2 = 1
+#define PIN_2_INIT_BUTTON(port)  GPIO##port##_PUPDR_REG->bite_register.bit_4 = 1
+#define PIN_3_INIT_BUTTON(port)  GPIO##port##_PUPDR_REG->bite_register.bit_6 = 1
+#define PIN_4_INIT_BUTTON(port)  GPIO##port##_PUPDR_REG->bite_register.bit_8 = 1
+#define PIN_5_INIT_BUTTON(port)  GPIO##port##_PUPDR_REG->bite_register.bit_10 = 1
+#define PIN_6_INIT_BUTTON(port)  GPIO##port##_PUPDR_REG->bite_register.bit_12 = 1
+#define PIN_7_INIT_BUTTON(port)  GPIO##port##_PUPDR_REG->bite_register.bit_14 = 1
+#define PIN_8_INIT_BUTTON(port)  GPIO##port##_PUPDR_REG->bite_register.bit_16 = 1
+#define PIN_9_INIT_BUTTON(port)  GPIO##port##_PUPDR_REG->bite_register.bit_18 = 1
 #define PIN_10_INIT_BUTTON(port) GPIO##port##_PUPDR_REG->bite_register.bit_20 = 1
 #define PIN_11_INIT_BUTTON(port) GPIO##port##_PUPDR_REG->bite_register.bit_22 = 1
 #define PIN_12_INIT_BUTTON(port) GPIO##port##_PUPDR_REG->bite_register.bit_24 = 1
@@ -37,16 +37,16 @@
  * Пример :
  * PIN_0_INIT_OUT(A) - инициализация пина 0 порта A
  */
-#define PIN_0_INIT_OUT(port) GPIO##port##_MODER_REG->bite_register.bit_0 = 1
-#define PIN_1_INIT_OUT(port) GPIO##port##_MODER_REG->bite_register.bit_2 = 1
-#define PIN_2_INIT_OUT(port) GPIO##port##_MODER_REG->bite_register.bit_4 = 1
-#define PIN_3_INIT_OUT(port) GPIO##port##_MODER_REG->bite_register.bit_6 = 1
-#define PIN_4_INIT_OUT(port) GPIO##port##_MODER_REG->bite_register.bit_8 = 1
-#define PIN_5_INIT_OUT(port) GPIO##port##_MODER_REG->bite_register.bit_10 = 1
-#define PIN_6_INIT_OUT(port) GPIO##port##_MODER_REG->bite_register.bit_12 = 1
-#define PIN_7_INIT_OUT(port) GPIO##port##_MODER_REG->bite_register.bit_14 = 1
-#define PIN_8_INIT_OUT(port) GPIO##port##_MODER_REG->bite_register.bit_16 = 1
-#define PIN_9_INIT_OUT(port) GPIO##port##_MODER_REG->bite_register.bit_18 = 1
+#define PIN_0_INIT_OUT(port)  GPIO##port##_MODER_REG->bite_register.bit_0 = 1
+#define PIN_1_INIT_OUT(port)  GPIO##port##_MODER_REG->bite_register.bit_2 = 1
+#define PIN_2_INIT_OUT(port)  GPIO##port##_MODER_REG->bite_register.bit_4 = 1
+#define PIN_3_INIT_OUT(port)  GPIO##port##_MODER_REG->bite_register.bit_6 = 1
+#define PIN_4_INIT_OUT(port)  GPIO##port##_MODER_REG->bite_register.bit_8 = 1
+#define PIN_5_INIT_OUT(port)  GPIO##port##_MODER_REG->bite_register.bit_10 = 1
+#define PIN_6_INIT_OUT(port)  GPIO##port##_MODER_REG->bite_register.bit_12 = 1
+#define PIN_7_INIT_OUT(port)  GPIO##port##_MODER_REG->bite_register.bit_14 = 1
+#define PIN_8_INIT_OUT(port)  GPIO##port##_MODER_REG->bite_register.bit_16 = 1
+#define PIN_9_INIT_OUT(port)  GPIO##port##_MODER_REG->bite_register.bit_18 = 1
 #define PIN_10_INIT_OUT(port) GPIO##port##_MODER_REG->bite_register.bit_20 = 1
 #define PIN_11_INIT_OUT(port) GPIO##port##_MODER_REG->bite_register.bit_22 = 1
 #define PIN_12_INIT_OUT(port) GPIO##port##_MODER_REG->bite_register.bit_24 = 1
@@ -74,7 +74,7 @@
 void rcc_init(void);
 void mco2_init(void);
 void i2c1_init(void);
-
+void init_tim6();
 
 
 
